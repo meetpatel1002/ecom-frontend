@@ -1,0 +1,104 @@
+{
+  "seller": [
+    {
+      "id": "79a1",
+      "name": " Meet patel",
+      "email": "meet@gmail.com",
+      "password": "meet@123"
+    },
+    {
+      "id": "e9d1",
+      "name": "one",
+      "email": "one@gmail.com",
+      "password": "meet@123"
+    },
+    {
+      "id": "86ea",
+      "name": "Meet patel",
+      "email": "patel.meet2802@gmail.com",
+      "password": "meeyt@123"
+    },
+    {
+      "id": "d92f",
+      "name": "three",
+      "email": "three@gmail.com",
+      "password": "meet@123"
+    },
+    {
+      "id": "2fb2",
+      "name": "four",
+      "email": "four@gmail.com",
+      "password": "meet@123"
+    },
+    {
+      "id": "ff95",
+      "name": "seven",
+      "email": "seven@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "9900",
+      "name": "eight",
+      "email": "eight@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "ee12",
+      "name": "Meet patel",
+      "email": "meet.patel1002@gmail.com",
+      "password": "meet@123"
+    },
+    {
+      "id": "fffb",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "de5d",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "5cf1",
+      "observe": "response"
+    },
+    {
+      "id": "fc19",
+      "observe": "response"
+    },
+    {
+      "id": "8cfa",
+      "observe": "response"
+    },
+    {
+      "id": "47f3",
+      "observe": "response"
+    },
+    {
+      "id": "577b",
+      "observe": "response"
+    },
+    {
+      "id": "99c6",
+      "observe": "response"
+    },
+    {
+      "id": "234a",
+      "observe": "response"
+    },
+    {
+      "id": "df92",
+      "observe": "response"
+    },
+    {
+      "id": "a155",
+      "observe": "response"
+    },
+    {
+      "id": "d66d",
+      "observe": "response"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+<div class="cart-page">
+  <h1>Cart page</h1>
+  <div class="row">
+    <div class="col-sm-8 details">
+      <ul *ngFor="let cart of cartData">
+        <li>
+          <img [src]="cart.image" alt="" />
+        </li>
+        <li>
+          <span>{{ cart.name }}</span>
+        </li>
+        <li>
+          <span>Price: {{ cart.price }}</span>
+        </li>
+        <li>
+          <span>Quantity: {{ cart.quantity }}</span>
+        </li>
+        <li>
+          <button class="form-button" (click)="removeCart(cart._id)">
+            Remove From Cart
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-4 summary">
+      <h3>Price Summary</h3>
+      <ul>
+        <li><span>Amount</span><span>{{ Price.price }}</span></li>
+        <li><span>Tax</span><span>{{ Price.tax }}</span></li>
+        <li><span>Delivery</span><span>{{ Price.delivery }}</span></li>
+        <li><span>Discount</span><span>{{ Price.discount }}</span></li>
+        <li>
+          <span>
+            <h4>Total</h4>
+          </span>
+          <span><h4>{{ Price.total }}</h4></span>
+        </li>
+        <button class="form-button max-width" (click)="checkout()">
+          Checkout
+        </button>
+      </ul>
+    </div>
+  </div>
+</div>

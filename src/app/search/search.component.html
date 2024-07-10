@@ -1,0 +1,18 @@
+<div *ngIf="noResultFound">
+<p>No data found</p>
+</div>
+
+<div class="row search-item" *ngFor="let products of searchResult">
+<div class="col-sm-3">
+   <a routerLink="/details/{{products._id}}">
+    <img src={{products.image}} alt="">
+   </a>
+</div>
+<div class="col-sm-8 details">
+<h6><a routerLink="/details/{{products._id}}">{{products.name}}</a></h6>
+<p><b>{{products.price}}</b></p>
+<p><span>{{products.color}}</span><span>{{products.category}}</span></p>
+<p>Product search UI</p>
+</div>
+</div>
+
