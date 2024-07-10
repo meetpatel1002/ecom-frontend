@@ -12,7 +12,7 @@ export class UserService {
 
   userSignUp(user: Signup) {
     this.http
-      .post('https://ecomm-backend-eight.vercel.app/seller', user, { observe: 'response' })
+      .post('https://ecomm-backend-alpha.vercel.app/seller', user, { observe: 'response' })
       .subscribe((result) => {
         if (result) {
           localStorage.setItem('user', JSON.stringify(result.body));
@@ -24,7 +24,7 @@ export class UserService {
   userLogin(data: Login) {
     this.http
       .get<Signup[]>(
-        `https://ecomm-backend-eight.vercel.app/seller/login?email=${data.email}&password=${data.password}`,
+        `https://ecomm-backend-alpha.vercel.app/seller/login?email=${data.email}&password=${data.password}`,
         { observe: 'response' }
       )
       .subscribe((result) => {

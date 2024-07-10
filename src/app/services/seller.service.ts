@@ -13,7 +13,7 @@ export class SellerService {
 
   signUp(data: Signup) {
     this.http
-      .post('https://ecomm-backend-eight.vercel.app/users', data, {
+      .post('https://ecomm-backend-alpha.vercel.app/users', data, {
         observe: 'response',
       })
       .subscribe((result) => {
@@ -30,7 +30,7 @@ export class SellerService {
   }
 
   Login(data:Login){
-    this.http.get<any>(`https://ecomm-backend-eight.vercel.app/users/login?email=${data.email}&password=${data.password}`,
+    this.http.get<any>(`https://ecomm-backend-alpha.vercel.app/users/login?email=${data.email}&password=${data.password}`,
     {observe:'response'}).subscribe((result:any)=>{
      console.warn(result)
      if(result && result.body){
