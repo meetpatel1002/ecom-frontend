@@ -22,38 +22,38 @@ export class ProductService {
   }
 
   addProduct(data: Product): Observable<any> {
-    return this.http.post('http://localhost:8080/products', data);
+    return this.http.post('https://ecomm-backend-eight.vercel.app/products', data);
   }
 
   productList(): Observable<Product[]> {
-    return this.http.get<Product[]>('http://localhost:8080/products');
+    return this.http.get<Product[]>('https://ecomm-backend-eight.vercel.app/products');
   }
 
   deleteProduct(_id: number): Observable<any> {
-    return this.http.delete(`http://localhost:8080/products/${_id}`);
+    return this.http.delete(`https://ecomm-backend-eight.vercel.app/products/${_id}`);
   }
 
   getProduct(_id: string): Observable<Product> {
-    return this.http.get<Product>(`http://localhost:8080/products/${_id}`);
+    return this.http.get<Product>(`https://ecomm-backend-eight.vercel.app/products/${_id}`);
   }
 
   updateProduct(product: Product): Observable<Product> {
     return this.http.put<Product>(
-      `http://localhost:8080/products/${product._id}`,
+      `https://ecomm-backend-eight.vercel.app/products/${product._id}`,
       product
     );
   }
 
   popularProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>('http://localhost:8080/products?limit=5');
+    return this.http.get<Product[]>('https://ecomm-backend-eight.vercel.app/products?limit=5');
   }
 
   trendyProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>('http://localhost:8080/products?limit=8');
+    return this.http.get<Product[]>('https://ecomm-backend-eight.vercel.app/products?limit=8');
   }
 
   searchProducts(query: string): Observable<Product[]> {
-    return this.http.get<Product[]>(`http://localhost:8080/products?search=${query}`);
+    return this.http.get<Product[]>(`https://ecomm-backend-eight.vercel.app/products?search=${query}`);
   }
 
   localAddToCart(data: Product): void {
@@ -81,11 +81,11 @@ export class ProductService {
   }
 
   addToCart(cartData: Cart): Observable<any> {
-    return this.http.post('http://localhost:8080/cart', cartData);
+    return this.http.post('https://ecomm-backend-eight.vercel.app/cart', cartData);
   }
 
   getCartList(userId: number): void {
-    this.http.get<Product[]>(`http://localhost:8080/cart/${userId}`, {
+    this.http.get<Product[]>(`https://ecomm-backend-eight.vercel.app/cart/${userId}`, {
       observe: 'response',
     }).subscribe((result) => {
       if (result && result.body) {
@@ -95,27 +95,27 @@ export class ProductService {
   }
 
   removeFromCart(cartId: number): Observable<any> {
-    return this.http.delete(`http://localhost:8080/cart/${cartId}`);
+    return this.http.delete(`https://ecomm-backend-eight.vercel.app/cart/${cartId}`);
   }
 
   currentCart(): Observable<Cart[]> {
     const userStore = localStorage.getItem('user');
     const userData = userStore ? JSON.parse(userStore) : undefined;
-    return this.http.get<Cart[]>(`http://localhost:8080/cart/user/${userData._id}`);
+    return this.http.get<Cart[]>(`https://ecomm-backend-eight.vercel.app/cart/user/${userData._id}`);
   }
 
   orderNow(data: Order): Observable<any> {
-    return this.http.post('http://localhost:8080/orders', data);
+    return this.http.post('https://ecomm-backend-eight.vercel.app/orders', data);
   }
 
   orderList(): Observable<Order[]> {
     const userStore = localStorage.getItem('user');
     const userData = userStore ? JSON.parse(userStore) : undefined;
-    return this.http.get<Order[]>(`http://localhost:8080/orders/${userData._id}`);
+    return this.http.get<Order[]>(`https://ecomm-backend-eight.vercel.app/orders/${userData._id}`);
   }
 
   deleteCartItems(cartId: number): void {
-    this.http.delete(`http://localhost:8080/cart/${cartId}`, { observe: 'response' })
+    this.http.delete(`https://ecomm-backend-eight.vercel.app/cart/${cartId}`, { observe: 'response' })
       .subscribe((result) => {
         if (result) {
           this.cartDataSubject.next([]);
@@ -124,7 +124,7 @@ export class ProductService {
   }
 
   cancelOrder(orderId: number): Observable<any> {
-    return this.http.delete(`http://localhost:8080/orders/${orderId}`);
+    return this.http.delete(`https://ecomm-backend-eight.vercel.app/orders/${orderId}`);
   }
 
   clearCartData(): void {
